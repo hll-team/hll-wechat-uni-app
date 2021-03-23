@@ -1,12 +1,12 @@
 <template>
 	<view class="card">
 		<view class="line1">
-			<text>COUPON \nCENTER</text>
-			<image style="width: 40px;height: 40px;" class="banner" src="/static/img/card.png"></image>
+			<text>{{cardData.enName}}</text>
+			<image style="width: 40px;height: 40px;" class="banner" :src="cardData.icon? cardData.icon : '/static/img/card.png'"></image>
 		</view>
 		<view class="line2">
-			<text class="number">15</text>
-			<text>领劵中心</text>
+			<text class="number">{{cardData.num}}</text>
+			<text>{{cardData.cnName}}</text>
 		</view>
 	</view>
 </template>
@@ -18,7 +18,8 @@
 			return {
 				
 			};
-		}
+		},
+		props:['cardData']
 	}
 </script>
 

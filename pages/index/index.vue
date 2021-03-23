@@ -1,31 +1,39 @@
 <template>
-	<view class="content">
-		<image  class="banner" src="/static/img/banner.png"></image>
-		<view class="flex-row flex-jc-sa" style="margin-top:4px;">
+	<view class="index">
+		<view class="index-header">
+			<image class="index-header-logo" src="/static/img/logo_white.png"></image>
+			<AdvertSwiper></AdvertSwiper>
+		</view>
+		<view class="flex-row flex-jc-sa" style="margin-top:8px;">
 			<view style="border-right:1px solid #000;padding-right:10px;">
-				<HllCard/>
+				<HllCard :cardData="cardData[0]"/>
 			</view>
 			<view>
-				<HllCard/>
+				<HllCard :cardData="cardData[1]"/>
 			</view>
 		</view>
 		<view class="menu flex-row flex-jc-sb" style="width:85%;border-top: 1px solid #000; margin:15px auto 0;padding:10px;">
-			<text>NEWS.</text>
+			<text style="font-family: 'AkzidenzGroteskBQ-Ext';">NEWS.</text>
 			<text>品牌动向</text>
 		</view>
-		<image  style="height: 210px;width:100%;" src="/static/img/HLL 08 04.png"></image>
+		<image style="height: 210px;width:100%;" src="/static/img/HLL 08 04.png"></image>
 	</view>
 </template>
 
 <script>
-	import HllCard from '@/components/hll-card.vue'
+	import HllCard from '@/components/common/hll-card.vue'
+	import AdvertSwiper from './components/advert-swiper.vue'
 	export default {
 		components:{
-			HllCard
+			HllCard,
+			AdvertSwiper,
 		},
 		data() {
 			return {
-				title: 'Hello'
+				title: 'Hello',
+				cardData:[{enName:'COUPON\nCENTER',cnName:'领劵中心',num:15},
+				{enName:'GIFT\nCARDR',cnName:'礼品卡',num:12,icon: '/static/img/index/gift-card.png'}],
+				
 			}
 		},
 		onLoad() {
@@ -38,11 +46,20 @@
 </script>
 
 <style lang="less">
-	.content {
+	.index {
 		background: #E6DEDB;
-		.banner{
+		.index-header{
 			width: 100%;
-			height: 628px;
+			text-align: center;
+			.index-header-logo{
+				position: absolute;
+				width: 139px;
+				height: 17px;
+				margin:auto;
+				top:5%;
+				left:32%;
+				z-index: 999;
+			}
 		}
 	}
 

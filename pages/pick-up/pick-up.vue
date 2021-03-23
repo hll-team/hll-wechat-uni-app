@@ -1,6 +1,6 @@
 <template>
-	<view>
-		<view  style="height:164px;">
+	<view class="pick-up">
+		<view class="pick-up-header" style="height:164px;">
 			<view class="flex-row">
 				<image style="height: 17px; width: 140px; margin:0 auto;margin-top: 45px;" src="/static/img/hll_logo.png"></image>
 			</view>
@@ -34,27 +34,10 @@
 					</view>
 					<view class="cu-list menu-avatar">
 						<view class="cu-item">
-							<view class="cu-avatar round lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg);"></view>
+							<goods-card></goods-card>
 						</view>
 						<view class="cu-item">
-							<view class="cu-avatar round lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/img/champion/Taric.png);">
-								<view class="cu-tag badge">99+</view>
-							</view>
-							<view class="content">
-								<view class="text-grey">
-									<text class="text-cut">瓦洛兰之盾-塔里克</text>
-									<view class="cu-tag round bg-orange sm">战士</view>
-								</view>
-								<view class="text-gray text-sm flex">
-									<text class="text-cut">
-										塔里克是保护者星灵，用超乎寻常的力量守护着符文之地的生命、仁爱以及万物之美。塔里克由于渎职而被放逐，离开了祖国德玛西亚，前去攀登巨神峰寻找救赎，但他找到的却是来自星界的更高层的召唤。现在的塔里克与古代巨神族的神力相融合，以瓦洛兰之盾的身份，永不疲倦地警惕着阴险狡诈的虚空腐化之力。
-									</text>
-								</view>
-							</view>
-							<view class="action">
-								<view class="text-grey text-xs">22:20</view>
-								<view class="cuIcon-notice_forbid_fill text-gray"></view>
-							</view>
+							<goods-card></goods-card>
 						</view>
 						<view class="cu-item ">
 							<view class="cu-avatar radius lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/img/champion/Morgana.png);"></view>
@@ -105,7 +88,11 @@
 </template>
 
 <script>
+	import GoodsCard from '@/components/common/goods-card.vue'
 	export default {
+		components:{
+			GoodsCard,
+		},
 		data() {
 			return {
 				list: [],
@@ -171,7 +158,12 @@
 	}
 </script>
 
-<style>
+<style lang="less">
+	.pick-up{
+		.pick-up-header{
+			background-color: #FFFFFF;
+		}
+	}
 	.fixed {
 		position: fixed;
 		z-index: 99;
@@ -188,12 +180,12 @@
 		background-color: #fff;
 		margin: 0;
 		border: none;
-		height: 50px;
+		height: 95px;
 		position: relative;
 	}
 
 	.VerticalNav.nav .cu-item.cur {
-		background-color: #f1f1f1;
+		background-color: #E6DEDB;
 	}
 
 	.VerticalNav.nav .cu-item.cur::after {
@@ -214,7 +206,7 @@
 	}
 
 	.VerticalMain {
-		background-color: #f1f1f1;
+		background-color: #E6DEDB;
 		flex: 1;
 	}
 </style>
