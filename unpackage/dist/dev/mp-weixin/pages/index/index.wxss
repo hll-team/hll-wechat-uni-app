@@ -1,0 +1,8 @@
+.content {
+  background: #E6DEDB;
+}
+.content .banner {
+  width: 100%;
+  height: 628px;
+}
+

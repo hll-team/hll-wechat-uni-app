@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/pick-up/pick-up",
+    "pages/shop/shop",
+    "pages/order/order",
+    "pages/my/my"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "#FF933B",
+    "backgroundColor": "#fbf9fe"
+  },
+  "tabBar": {
+    "color": "#7a7e83",
+    "selectedColor": "#000000",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/img/tab/home.png",
+        "selectedIconPath": "static/img/tab/homeS.png"
+      },
+      {
+        "pagePath": "pages/pick-up/pick-up",
+        "text": "自提",
+        "iconPath": "static/img/tab/pick-up.png",
+        "selectedIconPath": "static/img/tab/pick-upS.png"
+      },
+      {
+        "pagePath": "pages/shop/shop",
+        "text": "商城",
+        "iconPath": "static/img/tab/shop.png",
+        "selectedIconPath": "static/img/tab/shopS.png"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "订单",
+        "iconPath": "static/img/tab/order.png",
+        "selectedIconPath": "static/img/tab/orderS.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "static/img/tab/my.png",
+        "selectedIconPath": "static/img/tab/myS.png"
+      }
+    ]
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap9.json"
+}
