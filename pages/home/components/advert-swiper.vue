@@ -2,7 +2,7 @@
 	<view class="advert">
 		<view class="advert-notice  flex flex-jc-center">
 			<view class="swiper-item-notice flex flex-ai-center">
-					<image style="width: 22px; height: 22px;margin-left:13px;" src="/static/img/index/notice.png"></image>
+					<image style="width: 22px; height: 22px;margin-left:13px;" src="/static/img/home/notice.png"></image>
 					<swiper class="advert-notice-swiper" :indicator-dots="false" :autoplay="true" :interval="interval" :duration="duration" :vertical="true" >
 					<swiper-item v-for="item in noticesList">
 						<text style="margin-left: 13px;">{{item}}</text>
@@ -18,17 +18,17 @@
 			</swiper-item>
 			<swiper-item>
 				<view class="swiper-item uni-bg-green">
-					<image class="banner" src="/static/img/index/test1.png"></image>
+					<image class="banner" src="/static/img/home/test1.png"></image>
 				</view>
 			</swiper-item>
 			<swiper-item>
 				<view class="swiper-item uni-bg-blue">
-					<image class="banner" src="/static/img/index/test2.jpeg"></image>
+					<image class="banner" src="/static/img/home/test2.jpeg"></image>
 				</view>
 			</swiper-item>
 			<swiper-item>
 				<view class="swiper-item uni-bg-blue">
-					<image class="banner" src="/static/img/index/test3.jpg"></image>
+					<image class="banner" src="/static/img/home/test3.jpg"></image>
 				</view>
 			</swiper-item>
 		</swiper>

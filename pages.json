@@ -41,6 +41,33 @@
 		    }
 		}
     ],
+	"subPackages": [{
+		"root": "subPackages",
+		"pages": [
+			{
+				"path" : "home/vip-card/vip-card",
+				"style" :                                                                                    
+                {
+                    "navigationBarTitleText": "好利来会员卡",
+                    "enablePullDownRefresh": false,
+					"app-plus": {
+					        "animationType": "slide-in-right",
+					        "animationDuration": 300
+					    }
+                }
+                
+            }
+            ,{
+                    "path" : "home/coupon-center/coupon-center",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "领劵中心",
+                    "enablePullDownRefresh": false
+                }
+                
+                }
+            ]
+	}],
 	"tabBar": {
 		"color": "#7a7e83",
 		"selectedColor": "#000000",
@@ -49,38 +76,38 @@
 			{
 				"pagePath": "pages/home/home",
 				"text": "首页",
-				"iconPath": "static/img/tab/home.png",
-				"selectedIconPath": "static/img/tab/homeS.png"
+				"iconPath": "static/img/tabbar/home.png",
+				"selectedIconPath": "static/img/tabbar/homeS.png"
 			},
 			{
 				"pagePath": "pages/pick-up/pick-up",
 				"text": "自提",
-				"iconPath": "static/img/tab/pick-up.png",
-				"selectedIconPath": "static/img/tab/pick-upS.png"
+				"iconPath": "static/img/tabbar/pick-up.png",
+				"selectedIconPath": "static/img/tabbar/pick-upS.png"
 			},
 			{
 				"pagePath": "pages/mall/mall",
 				"text": "商城",
-				"iconPath": "static/img/tab/shop.png",
-				"selectedIconPath": "static/img/tab/shopS.png"
+				"iconPath": "static/img/tabbar/shop.png",
+				"selectedIconPath": "static/img/tabbar/shopS.png"
 			},
 			{
 				"pagePath": "pages/order/order",
 				"text": "订单",
-				"iconPath": "static/img/tab/order.png",
-				"selectedIconPath": "static/img/tab/orderS.png"
+				"iconPath": "static/img/tabbar/order.png",
+				"selectedIconPath": "static/img/tabbar/orderS.png"
 			},
 			{
 				"pagePath": "pages/mine/mine",
 				"text": "我的",
-				"iconPath": "static/img/tab/my.png",
-				"selectedIconPath": "static/img/tab/myS.png"
+				"iconPath": "static/img/tabbar/my.png",
+				"selectedIconPath": "static/img/tabbar/myS.png"
 			}
 		]
 	},
 	"globalStyle": {
-		"navigationBarTextStyle": "white",
-		"navigationBarBackgroundColor": "#FF933B",
+		"navigationBarTextStyle": "black",
+		"navigationBarBackgroundColor": "#FFFFFF",
 		"backgroundColor": "#fbf9fe"
 	},
 	"condition": { //模式配置，仅开发期间生效

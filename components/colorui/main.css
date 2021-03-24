@@ -12,9 +12,10 @@
  ==================== */
 body {
 	background-color: #f1f1f1;
-	font-size: 28upx;
+	font-size: 30upx;
+	font-weight: 500;
 	color: #333333;
-	font-family: AkzidenzGroteskBQ-Ext,Helvetica Neue, Helvetica, sans-serif;
+	font-family: AkzidenzGroteskBQ,Helvetica Neue, Helvetica, sans-serif;
 }
 
 view,

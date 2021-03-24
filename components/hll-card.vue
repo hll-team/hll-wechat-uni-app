@@ -2,7 +2,7 @@
 	<view class="card">
 		<view class="line1">
 			<text>{{cardData.enName}}</text>
-			<image style="width: 40px;height: 40px;" class="banner" :src="cardData.icon? cardData.icon : '/static/img/card.png'"></image>
+			<image @click="goTo" style="width: 40px;height: 40px;" class="banner" :src="cardData.icon? cardData.icon : '/static/img/card.png'"></image>
 		</view>
 		<view class="line2">
 			<text class="number">{{cardData.num}}</text>
@@ -19,7 +19,19 @@
 				
 			};
 		},
-		props:['cardData']
+		props:['cardData'],
+		methods:{
+			goTo(){
+				console.log(this.cardData.url)
+				if(this.cardData.url) {
+					uni.navigateTo({
+						url: this.cardData.url,
+						animationType: 'slide-in-right',
+						animationDuration: 200
+					});
+				}
+			}
+		}
 	}
 </script>
 

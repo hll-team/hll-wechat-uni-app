@@ -1,6 +1,6 @@
 <template>
 	<view class="hll-title">
-		<image class="hll-title-logo" src="/static/img/logo_white.png"></image>
+		<image class="hll-title-logo" src="/static/img/logo-white.png"></image>
 	</view>
 </template>
 

@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "首页",
-  "navigationStyle": "custom",
-  "usingComponents": {
-    "hll-card": "/components/common/hll-card",
-    "advert-swiper": "/pages/index/components/advert-swiper"
-  }
-}

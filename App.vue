@@ -22,13 +22,13 @@
 <style>
 	/*每个页面公共css */
 	@import url('./static/css/flex.less');
-	@import "colorui/main.css";
+	@import "components/colorui/main.css";
 	
-	@import "colorui/icon.css";
+	@import "components/colorui/icon.css";
 	
 	@font-face {
 	     font-family: 'AkzidenzGroteskBQ';
-	     src: url('~@/static/css/AkzidenzGroteskBQ-MedExt.otf');
+	     src: url('~@/static/css/AkzidenzGrotesk-Extended.otf');
 	 }
 	 .big-icon{
 		 width: 32px;
