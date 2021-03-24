@@ -1,7 +1,7 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页,
 		{
-			"path": "pages/index/index",
+			"path": "pages/home/home",
 			"style": {
 				"navigationBarTitleText": "首页",
 				"navigationStyle": "custom"
@@ -15,7 +15,7 @@
 			}
 		},
 	    {
-            "path" : "pages/shop/shop",
+            "path" : "pages/mall/mall",
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "商城",
@@ -32,7 +32,7 @@
             }
         },
 		{
-		    "path" : "pages/my/my",
+		    "path" : "pages/mine/mine",
 		    "style" :                                                                                    
 		    {
 		        "navigationBarTitleText": "",
@@ -47,7 +47,7 @@
 		"backgroundColor": "#ffffff",
 		"list": [
 			{
-				"pagePath": "pages/index/index",
+				"pagePath": "pages/home/home",
 				"text": "首页",
 				"iconPath": "static/img/tab/home.png",
 				"selectedIconPath": "static/img/tab/homeS.png"
@@ -59,7 +59,7 @@
 				"selectedIconPath": "static/img/tab/pick-upS.png"
 			},
 			{
-				"pagePath": "pages/shop/shop",
+				"pagePath": "pages/mall/mall",
 				"text": "商城",
 				"iconPath": "static/img/tab/shop.png",
 				"selectedIconPath": "static/img/tab/shopS.png"
@@ -71,7 +71,7 @@
 				"selectedIconPath": "static/img/tab/orderS.png"
 			},
 			{
-				"pagePath": "pages/my/my",
+				"pagePath": "pages/mine/mine",
 				"text": "我的",
 				"iconPath": "static/img/tab/my.png",
 				"selectedIconPath": "static/img/tab/myS.png"

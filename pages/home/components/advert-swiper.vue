@@ -1,6 +1,6 @@
 <template>
 	<view class="advert">
-		<view class="advert-notice">
+		<view class="advert-notice  flex flex-jc-center">
 			<view class="swiper-item-notice flex flex-ai-center">
 					<image style="width: 22px; height: 22px;margin-left:13px;" src="/static/img/index/notice.png"></image>
 					<swiper class="advert-notice-swiper" :indicator-dots="false" :autoplay="true" :interval="interval" :duration="duration" :vertical="true" >
@@ -13,22 +13,22 @@
 		<swiper class="advert-swiper" :indicator-dots="false" :autoplay="autoplay" :interval="interval" :duration="duration">
 			<swiper-item>
 				<view class="swiper-item uni-bg-red">
-					<image class="banner" style="width:100%;height: 528px;" src="/static/img/banner.png"></image>
+					<image class="banner" src="/static/img/banner.png"></image>
 				</view>
 			</swiper-item>
 			<swiper-item>
 				<view class="swiper-item uni-bg-green">
-					<image class="banner" style="width:100%;height: 528px;" src="/static/img/index/test1.png"></image>
+					<image class="banner" src="/static/img/index/test1.png"></image>
 				</view>
 			</swiper-item>
 			<swiper-item>
 				<view class="swiper-item uni-bg-blue">
-					<image class="banner" style="width:100%;height: 528px;" src="/static/img/index/test2.jpeg"></image>
+					<image class="banner" src="/static/img/index/test2.jpeg"></image>
 				</view>
 			</swiper-item>
 			<swiper-item>
 				<view class="swiper-item uni-bg-blue">
-					<image class="banner" style="width:100%;height: 528px;" src="/static/img/index/test3.jpg"></image>
+					<image class="banner" src="/static/img/index/test3.jpg"></image>
 				</view>
 			</swiper-item>
 		</swiper>
@@ -64,7 +64,7 @@
 			z-index: 999;
 			height: 20px;
 			width: 100%;
-			top:8%;
+			top:96px;
 			.swiper-item-notice{
 				position: absolute;
 				width: 300px;
@@ -75,8 +75,6 @@
 				opacity: 0.7;
 				z-index: 99;
 				margin: auto;
-				top:12%;
-				left: 10%;
 				font-size: 16px;
 				font-family: SourceHanSansCN-Regular, SourceHanSansCN;
 				font-weight: 400;
@@ -89,7 +87,13 @@
 			}
 		}
 		.advert-swiper{
-			height: 528px;
+			height: 628px;
+			.swiper-item{
+				.banner{
+					width: 100%;
+					height: 628px;
+				}
+			}
 			
 		}
 	}

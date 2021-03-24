@@ -1,7 +1,7 @@
 <template>
 	<view class="index">
+		<HllTitle></HllTitle>
 		<view class="index-header">
-			<image class="index-header-logo" src="/static/img/logo_white.png"></image>
 			<AdvertSwiper></AdvertSwiper>
 		</view>
 		<view class="flex-row flex-jc-sa" style="margin-top:8px;">
@@ -21,10 +21,12 @@
 </template>
 
 <script>
-	import HllCard from '@/components/common/hll-card.vue'
+	import HllCard from '@/components/hll-card.vue'
+	import HllTitle from '@/components/hll-title.vue'
 	import AdvertSwiper from './components/advert-swiper.vue'
 	export default {
 		components:{
+			HllTitle,
 			HllCard,
 			AdvertSwiper,
 		},
@@ -46,22 +48,7 @@
 </script>
 
 <style lang="less">
-	.index {
-		background: #E6DEDB;
-		.index-header{
-			width: 100%;
-			text-align: center;
-			.index-header-logo{
-				position: absolute;
-				width: 139px;
-				height: 17px;
-				margin:auto;
-				top:5%;
-				left:32%;
-				z-index: 999;
-			}
-		}
-	}
-
-	
+.index {
+	background: #E6DEDB;
+}
 </style>

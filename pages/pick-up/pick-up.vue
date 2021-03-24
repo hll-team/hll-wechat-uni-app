@@ -88,7 +88,7 @@
 </template>
 
 <script>
-	import GoodsCard from '@/components/common/goods-card.vue'
+	import GoodsCard from '@/components/goods-card.vue'
 	export default {
 		components:{
 			GoodsCard,
