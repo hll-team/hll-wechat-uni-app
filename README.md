@@ -136,3 +136,21 @@
   hll-card.vue          | 项目特殊卡片
   hll-title.vue         | 项目标题
 
+`cu-custom` 页面可以直接调用了
+```
+<cu-custom bgColor="bg-gradual-blue" :isBack="true">
+	<block slot="backText">返回</block>
+	<block slot="content">导航栏</block>
+</cu-custom>
+```
+| 参数       | 作用   |类型    |  默认值 |
+| --------   | -----:  |-----:  | :----:  |
+| bgColor    | 背景颜色类名 |String  |   ''    |
+| isBack     | 是否开启返回 | Boolean |   false |
+| bgImage    | 背景图片路径 | String  |  ''     |
+
+| slot块       | 作用   |
+| --------   | -----:  |
+| backText    | 返回时的文字 | 
+| content     | 中间区域 | 
+| right    | 右侧区

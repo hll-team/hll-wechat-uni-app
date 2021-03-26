@@ -3,7 +3,7 @@
 		<view class="cu-modal" :class="showModal?'show':''">
 			<view class="cu-dialog">
 				<view class="cu-bar justify-end">
-					<view class="close-button flex flex-jc-center flex-ai-center" @click="hideModal"> 
+					<view class="close-button flex justify-center align-center" @click="hideModal"> 
 						<text class="cuIcon-close "></text>
 					</view>
 				</view>

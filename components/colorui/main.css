@@ -11,11 +11,10 @@
         初始化
  ==================== */
 body {
-	background-color: #f1f1f1;
-	font-size: 30upx;
+	font-size: 38upx;
 	font-weight: 500;
 	color: #333333;
-	font-family: AkzidenzGroteskBQ,Helvetica Neue, Helvetica, sans-serif;
+	font-family: PingFangSC-Regular, PingFang SC,Helvetica Neue, Helvetica, sans-serif;
 }
 
 view,

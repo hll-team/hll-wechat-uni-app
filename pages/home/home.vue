@@ -1,6 +1,6 @@
 <template>
 	<view class="index">
-		<HllTitle></HllTitle>
+		<hll-header style="position: absolute;"></hll-header>
 		<view class="index-header">
 			<AdvertSwiper></AdvertSwiper>
 			<view class="vip-code" @click="showVipCode = true">
@@ -11,18 +11,12 @@
 				<image style="height:70px;width:348px;" src="/static/img/logo-big-white.png"></image>
 			</view>
 		</view>
-		<view class="flex-row flex-jc-sa" style="margin-top:8px;">
-			<view style="border-right:1px solid #000;padding-right:10px;">
-				<HllCard :cardData="cardData[0]"/>
-			</view>
-			<view>
-				<HllCard :cardData="cardData[1]"/>
-			</view>
+		<view class="flex justify-around" style="margin-top:8px;">
+			<HllCard style="flex:0.45" :cardData="cardData[0]"/>
+			<view style="border-right:1px solid #000;"></view>
+			<HllCard style="flex:0.45" :cardData="cardData[1]"/>
 		</view>
-		<view class="menu flex-row flex-jc-sb" style="width:85%;border-top: 1px solid #000; margin:15px auto 0;padding:10px;">
-			<text>NEWS.</text>
-			<text>品牌动向</text>
-		</view>
+		<hll-title :info="titleInfo"></hll-title>
 		<view>
 			<swiper class="shop-swiper" style="height: 210px;width:100%;" :indicator-dots="false" :autoplay="true" interval="3000" duration="1000">
 				<swiper-item v-for="item in shopsList" :key="item.id">
@@ -43,12 +37,10 @@
 
 <script>
 	import HllCard from '@/components/hll-card.vue'
-	import HllTitle from '@/components/hll-title.vue'
 	import AdvertSwiper from './components/advert-swiper.vue'
 	import VipCode from './components/vip-code.vue'
 	export default {
 		components:{
-			HllTitle,
 			HllCard,
 			AdvertSwiper,
 			VipCode,
@@ -63,7 +55,12 @@
 					{id:2,name:'好吃的',desc:'真的很好吃，赶快买它',img:'/static/img/HLL 08 04.png'},
 					{id:3,name:'吃不吃',desc:'真的很好吃，赶快买它',img:'/static/img/HLL 08 04.png'},
 					{id:4,name:'快来吃',desc:'真的很好吃，赶快买它',img:'/static/img/HLL 08 04.png'}
-				]
+				],
+				titleInfo:{
+					enName: 'NEWS.',
+					cnName: '品牌动向',
+					url: ''
+				}
 			}
 		},
 		onLoad() {

@@ -1,9 +1,9 @@
 <template>
 	<view class="vip-card">
-		<view class="qr-code flex flex-ai-center flex-jc-center">
+		<view class="qr-code flex align-center justify-center">
 			<image style="height:225px;width:225px;" src="/static/img/home/qr-code.jpg"></image>
 		</view>
-		<view class="shape-code flex flex-ai-center flex-jc-center">
+		<view class="shape-code flex align-center justify-center">
 			<image style="height:75px;width:225px;" src="/static/img/home/shape-code.jpg"></image>
 		</view>
 	</view>

@@ -1,7 +1,7 @@
 <template>
 	<view class="advert">
-		<view class="advert-notice  flex flex-jc-center">
-			<view class="swiper-item-notice flex flex-ai-center">
+		<view class="advert-notice  flex justify-center">
+			<view class="swiper-item-notice flex align-center">
 					<image style="width: 22px; height: 22px;margin-left:13px;" src="/static/img/home/notice.png"></image>
 					<swiper class="advert-notice-swiper" :indicator-dots="false" :autoplay="true" :interval="interval" :duration="duration" :vertical="true" >
 					<swiper-item v-for="item in noticesList">
@@ -87,11 +87,12 @@
 			}
 		}
 		.advert-swiper{
-			height: 628px;
+			height: calc(100vh - 170px);
+			max-height: 628px;
 			.swiper-item{
 				.banner{
 					width: 100%;
-					height: 628px;
+					height: calc(100vh - 170px);
 				}
 			}
 			

@@ -1,85 +1,38 @@
 <template>
 	<view class="pick-up">
-		<view class="pick-up-header" style="height:164px;">
-			<view class="flex-row">
-				<image style="height: 17px; width: 140px; margin:0 auto;margin-top: 45px;" src="/static/img/hll_logo.png"></image>
+		<hll-header type="black"></hll-header>
+		<view class="pick-up-header">
+			<view class="pick-up-header-shop">
+				<text>{{shopData.name}}</text>
+				<text class="pick-up-header-shop-desc">{{shopData.distance}}</text>
+				<text class="pick-up-header-shop-btn">更换门店</text>
 			</view>
-			<view style="padding-left:20px;margin-top:20px;">
-				<view style="font-size: 24px;font-weight: 500;color: #333333;">
-					<text>常营鹿港城店</text>
-					<text style="font-size: 12px;font-weight: 400;color: #858585;line-height: 17px;">12.07km</text>
-					<text style="float: right; display: inline-block; text-align: center; font-size: 12px;color:#FFFFFF;margin-right: 10px;width: 67px;height: 20px;line-height: 20px;background: #E4C2A9;border-radius: 10px;">更换门店</text>
-				</view>
-				<view>
-					<view style="font-size: 12px;font-weight: 400;color: #858585;line-height: 17px;">营业时间：9：00-22：00</view>
-					<view style="font-size: 12px;font-weight: 400;color: #858585;line-height: 17px;">常营鹿港城店店铺测试地址1</view>
-				</view>
-				</view>
+			<view>
+				<view class="pick-up-header-shop-desc">营业时间：{{shopData.businessHours}}</view>
+				<view class="pick-up-header-shop-desc">{{shopData.address}}</view>
+			</view>
 		</view>
 		
 		<view class="VerticalBox">
 			<scroll-view class="VerticalNav nav" scroll-y scroll-with-animation :scroll-top="verticalNavTop" style="height:calc(100vh - 375upx)">
-				<view class="cu-item" :class="index==tabCur?'text-green cur':''" v-for="(item,index) in list" :key="index" @tap="TabSelect"
+				<view class="cu-item" :class="index==tabCur?'text-black cur':''" v-for="(item,index) in list" :key="index" @tap="TabSelect"
 				 :data-id="index">
-				 DIM SUMS.
-					新品蛋糕-{{item.name}}
+				 <view class="font-en-ak">{{item.enName}}</view>
+				 <view style="margin-top:6px;font-size: 16px;">{{item.cnName}}</view>
 				</view>
-			</scroll-view>
+			</scroll-view> 
+			
 			<scroll-view class="VerticalMain" scroll-y scroll-with-animation style="height:calc(100vh - 375upx)"
-			 :scroll-into-view="'main-'+mainCur" @scroll="VerticalMain">
-				<view class="padding-top padding-lr" v-for="(item,index) in list" :key="index" :id="'main-'+index">
-					<view class="cu-bar solid-bottom bg-white">
-						<view class="action">
-							<text class="cuIcon-title text-green"></text> Tab-{{item.name}}</view>
-					</view>
-					<view class="cu-list menu-avatar">
-						<view class="cu-item">
-							<goods-card></goods-card>
-						</view>
-						<view class="cu-item">
-							<goods-card></goods-card>
-						</view>
-						<view class="cu-item ">
-							<view class="cu-avatar radius lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/img/champion/Morgana.png);"></view>
-							<view class="content">
-								<view class="text-pink"><text class="text-cut">莫甘娜</text></view>
-								<view class="text-gray text-sm flex"> <text class="text-cut">凯尔，你被自己的光芒变的盲目！</text></view>
-							</view>
-							<view class="action">
-								<view class="text-grey text-xs">22:20</view>
-								<view class="cu-tag round bg-red sm">5</view>
-							</view>
-						</view>
-						<view class="cu-item grayscale">
-							<view class="cu-avatar radius lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big81007.jpg);"></view>
-							<view class="content">
-								<view><text class="text-cut">伊泽瑞尔</text>
-									<view class="cu-tag round bg-orange sm">断开连接...</view>
-								</view>
-								<view class="text-gray text-sm flex"> <text class="text-cut"> 等我回来一个打十个</text></view>
-							</view>
-							<view class="action">
-								<view class="text-grey text-xs">22:20</view>
-								<view class="cu-tag round bg-red sm">5</view>
-							</view>
-						</view>
-						<view class="cu-item cur">
-							<view class="cu-avatar radius lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big81020.jpg);">
-								<view class="cu-tag badge"></view>
-							</view>
-							<view class="content">
-								<view>
-									<text class="text-cut">瓦罗兰大陆-睡衣守护者-新手保护营</text>
-									<view class="cu-tag round bg-orange sm">6人</view>
-								</view>
-								<view class="text-gray text-sm flex">
-									<text class="text-cut"> 伊泽瑞尔：<text class="cuIcon-locationfill text-orange margin-right-xs"></text> 传送中...</text></view>
-							</view>
-							<view class="action">
-								<view class="text-grey text-xs">22:20</view>
-								<view class="cuIcon-notice_forbid_fill text-gray"></view>
-							</view>
-						</view>
+			 :scroll-into-view="'main-'+mainCur">
+				<hll-notice style="margin-top:10px" :noticesList="noticesList"></hll-notice>
+				<view class="text-center">
+					<image class="advert" src="/static/img/pick-up/advert1.jpg"></image>
+					<image class="advert" src="/static/img/pick-up/advert2.jpg"></image>
+				</view>
+				<hll-title :info="menuInfo" size="small"></hll-title>
+				<view class="padding-lr" v-for="(item,index) in list" :key="index" :id="'main-'+index">
+					<view class="goods-list padding-top" v-for="(el,i) in item" :key="i">
+						<goods-card class="goods-list-item"></goods-card>
 					</view>
 				</view>
 			</scroll-view>
@@ -89,13 +42,31 @@
 
 <script>
 	import GoodsCard from '@/components/goods-card.vue'
+	import HllNotice from '@/components/hll-notice.vue'
 	export default {
 		components:{
 			GoodsCard,
+			HllNotice,
 		},
 		data() {
 			return {
-				list: [],
+				shopData:{
+					name:'常营鹿港城店',
+					distance: '12.7km',
+					businessHours: '9：00-22：00',
+					address: '常营鹿港城店店铺测试地址'
+				},
+				list: [
+					{id:1,enName:'NEW\nPRODUCTS.',cnName:'新品蛋糕',goods:[1,1,1]},
+					{id:2,enName:'DIM\nSUMS.',cnName:'中点',goods:[1,1,1]},
+					{id:3,enName:'PATRIES.',cnName:'西点',goods:[1,1,1]},
+					{id:4,enName:'ICE\nCREAMS.',cnName:'冰淇淋',goods:[1,1,1]},
+					{id:5,enName:'HOT\nSALES.',cnName:'热卖蛋糕',goods:[1,1,1]}],
+				noticesList:['单笔订单满269元可选择上门配送'],
+				menuInfo:{
+					enName:'NEW PRODUCTS.',
+					cnName: '新品蛋糕',
+				},
 				tabCur: 0,
 				mainCur: 0,
 				verticalNavTop: 0,
@@ -107,14 +78,6 @@
 				title: '加载中...',
 				mask: true
 			});
-			let list = [{}];
-			for (let i = 0; i < 26; i++) {
-				list[i] = {};
-				list[i].name = String.fromCharCode(65 + i);
-				list[i].id = i;
-			}
-			this.list = list;
-			this.listCur = list[0];
 		},
 		onReady() {
 			uni.hideLoading()
@@ -162,43 +125,67 @@
 	.pick-up{
 		.pick-up-header{
 			background-color: #FFFFFF;
+			padding:0 20px 20px 20px;
+			margin-top:20px;
+			.pick-up-header-shop{
+				font-size: 24px;
+				font-weight: 500;
+				color: #333333;
+				.pick-up-header-shop-btn{
+					float: right;
+					display: inline-block;
+					text-align: center;
+					font-size: 12px;
+					color:#FFFFFF;
+					width: 67px;
+					height: 20px;
+					line-height: 20px;
+					background: #E4C2A9;
+					border-radius: 10px;
+				}
+			}
+			.pick-up-header-shop-desc{
+				font-size: 12px;
+				font-weight: 400;
+				color: #858585;
+				line-height: 17px;
+			}
 		}
 	}
 	.fixed {
 		position: fixed;
 		z-index: 99;
 	}
-
+	
 	.VerticalNav.nav {
 		width: 200upx;
 		white-space: initial;
 	}
-
+	.advert{
+		height:120px;
+		width:90%;
+		margin:10px auto 0;
+	}
 	.VerticalNav.nav .cu-item {
+		padding-top:20px;
 		width: 100%;
-		text-align: center;
-		background-color: #fff;
+		opacity: 0.3;
 		margin: 0;
 		border: none;
 		height: 95px;
+		line-height:inherit;
+		font-size: 12px;
+		font-weight: 500;
 		position: relative;
+		background-color: #ece7e5;
+		color:#4D4D4D;
+		border-bottom: 1px solid #000;
 	}
 
 	.VerticalNav.nav .cu-item.cur {
 		background-color: #E6DEDB;
-	}
-
-	.VerticalNav.nav .cu-item.cur::after {
-		content: "";
-		width: 8upx;
-		height: 30upx;
-		border-radius: 10upx 0 0 10upx;
-		position: absolute;
-		background-color: currentColor;
-		top: 0;
-		right: 0upx;
-		bottom: 0;
-		margin: auto;
+		line-height:inherit;
+		opacity: 1;
 	}
 
 	.VerticalBox {
