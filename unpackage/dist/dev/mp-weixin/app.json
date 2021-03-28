@@ -1,16 +1,25 @@
 {
   "pages": [
-    "pages/index/index",
+    "pages/home/home",
     "pages/pick-up/pick-up",
-    "pages/shop/shop",
+    "pages/mall/mall",
     "pages/order/order",
-    "pages/my/my"
+    "pages/mine/mine"
   ],
-  "subPackages": [],
+  "subPackages": [
+    {
+      "root": "subPackages",
+      "pages": [
+        "home/vip-card/vip-card",
+        "home/coupon-center/coupon-center"
+      ]
+    }
+  ],
   "window": {
-    "navigationBarTextStyle": "white",
-    "navigationBarBackgroundColor": "#FF933B",
-    "backgroundColor": "#fbf9fe"
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "backgroundColor": "#fbf9fe",
+    "autoscan": true
   },
   "tabBar": {
     "color": "#7a7e83",
@@ -18,37 +27,40 @@
     "backgroundColor": "#ffffff",
     "list": [
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/home/home",
         "text": "首页",
-        "iconPath": "static/img/tab/home.png",
-        "selectedIconPath": "static/img/tab/homeS.png"
+        "iconPath": "static/img/tabbar/home.png",
+        "selectedIconPath": "static/img/tabbar/homeS.png"
       },
       {
         "pagePath": "pages/pick-up/pick-up",
         "text": "自提",
-        "iconPath": "static/img/tab/pick-up.png",
-        "selectedIconPath": "static/img/tab/pick-upS.png"
+        "iconPath": "static/img/tabbar/pick-up.png",
+        "selectedIconPath": "static/img/tabbar/pick-upS.png"
       },
       {
-        "pagePath": "pages/shop/shop",
+        "pagePath": "pages/mall/mall",
         "text": "商城",
-        "iconPath": "static/img/tab/shop.png",
-        "selectedIconPath": "static/img/tab/shopS.png"
+        "iconPath": "static/img/tabbar/shop.png",
+        "selectedIconPath": "static/img/tabbar/shopS.png"
       },
       {
         "pagePath": "pages/order/order",
         "text": "订单",
-        "iconPath": "static/img/tab/order.png",
-        "selectedIconPath": "static/img/tab/orderS.png"
+        "iconPath": "static/img/tabbar/order.png",
+        "selectedIconPath": "static/img/tabbar/orderS.png"
       },
       {
-        "pagePath": "pages/my/my",
+        "pagePath": "pages/mine/mine",
         "text": "我的",
-        "iconPath": "static/img/tab/my.png",
-        "selectedIconPath": "static/img/tab/myS.png"
+        "iconPath": "static/img/tabbar/my.png",
+        "selectedIconPath": "static/img/tabbar/myS.png"
       }
     ]
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap18.json"
+  "usingComponents": {
+    "hll-title": "/components/hll-title",
+    "hll-header": "/components/hll-header",
+    "cu-custom": "/components/colorui/components/cu-custom"
+  }
 }

@@ -1,5 +1,31 @@
+/* 颜色变量 */
 .pick-up .pick-up-header {
   background-color: #FFFFFF;
+  padding: 0 20px 20px 20px;
+  margin-top: 20px;
+}
+.pick-up .pick-up-header .pick-up-header-shop {
+  font-size: 24px;
+  font-weight: 500;
+  color: #333333;
+}
+.pick-up .pick-up-header .pick-up-header-shop .pick-up-header-shop-btn {
+  float: right;
+  display: inline-block;
+  text-align: center;
+  font-size: 12px;
+  color: #FFFFFF;
+  width: 67px;
+  height: 20px;
+  line-height: 20px;
+  background: #E4C2A9;
+  border-radius: 10px;
+}
+.pick-up .pick-up-header .pick-up-header-shop-desc {
+  font-size: 12px;
+  font-weight: 400;
+  color: #858585;
+  line-height: 17px;
 }
 .fixed {
   position: fixed;
@@ -9,29 +35,30 @@
   width: 200rpx;
   white-space: initial;
 }
+.advert {
+  height: 120px;
+  width: 90%;
+  margin: 10px auto 0;
+}
 .VerticalNav.nav .cu-item {
+  padding-top: 20px;
   width: 100%;
-  text-align: center;
-  background-color: #fff;
+  opacity: 0.3;
   margin: 0;
   border: none;
   height: 95px;
+  line-height: inherit;
+  font-size: 12px;
+  font-weight: 500;
   position: relative;
+  background-color: #ece7e5;
+  color: #4D4D4D;
+  border-bottom: 1px solid #000;
 }
 .VerticalNav.nav .cu-item.cur {
   background-color: #E6DEDB;
-}
-.VerticalNav.nav .cu-item.cur::after {
-  content: "";
-  width: 8rpx;
-  height: 30rpx;
-  border-radius: 10rpx 0 0 10rpx;
-  position: absolute;
-  background-color: currentColor;
-  top: 0;
-  right: 0rpx;
-  bottom: 0;
-  margin: auto;
+  line-height: inherit;
+  opacity: 1;
 }
 .VerticalBox {
   display: -webkit-box;

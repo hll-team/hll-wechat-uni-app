@@ -5,7 +5,8 @@
   },
   "setting": {
     "urlCheck": false,
-    "postcss": true
+    "postcss": true,
+    "minified": true
   },
   "compileType": "miniprogram",
   "libVersion": "",

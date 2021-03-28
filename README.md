@@ -1,138 +1,70 @@
 # 好利来微信小程序
-
-> 好利来微信小程序
-  参与该项目开发，请认真阅读开发规范，并严格遵守本项目前端开发规范
-##### 开发前需要注意的内容
-    > javaScript书写规范
-       命名规范
-       常量名
-          全部大写并单词间用下划线分隔
-          如：CSS_BTN_CLOSE、TXT_LOADING
-       对象的属性或方法名
-          小驼峰式（little camel-case）
-          如：init、bindEvent、updatePosition
-          例：
-            Dialog.prototype = {
-              init() {},
-              bindEvent() {},
-              updatePosition() {}
-              …
-            }
-       类名（构造器）
-          -->小驼峰式但首字母大写
-          -->如：Current、DefaultConfig
-       函数名
-          -->小驼峰式
-          -->如：current()、defaultConfig()
-       私有函数名
-          -->小驼峰式
-          -->如：_current()、_defaultConfig()
-       变量名
-          -->小驼峰式
-          -->如：current、defaultConfig
-       私有变量名
-          -->小驼峰式但需要用_开头
-          -->如：_current、_defaultConfig
-       代码风格
-          文本缩进，一次缩进两个空格，已添加到 eslint 规则
-          例：
-            constructor() {
-               super()
-            } √
-          语句结束省略掉 ;，已添加到 eslint 规则
-          例：
-            let obj = {}  √
-            let obj = {}; X
-          {}的使用，if else try catch switch 后面必须添加不可省略且{}要换行，已添加到 eslint 规则
-          例：
-            if(typeof obj === object) {
-              return true
-            } √
-            if(typeof obj === object) return true X
-            if(typeof obj === object)
-              return true X
-            if(typeof obj === object) { return true } X
-          this别名，统一使用that，已添加到 eslint 规则
-          例：
-            let that  = this √
-            let self  = this X
-            let _me   = this X
-            let _this = this X
-            let _that = this X
-          函数定义时括号前后不应有空行，已添加到 eslint 规则
-          例：
-            function fun(a, b) {
-              return a + b
-            } √
-            function fun(a, b) {
-            // 空行
-              return a + b
-            // 空行
-            } X
-            function fun(a, b) {
-              return a + b
-            // 空行
-            } X
-            function fun(a, b) {
-            // 空行
-              return a + b
-            } X 
-
+> 参与该项目开发，请认真阅读开发规范，并严格遵守本项目前端开发规范
 
 ## 环境依赖
- > - node: >= 12.18.0
- > - npm: >= 6.14.4
+- vue
+- vuex
+- vue-router
+- less
+- colorui
+- axios
+- npm: >= 6.14.4
+- node: >= 12.18.0
 
-## 组件依赖
-##### 基本组件
-   > - vue
-   > - vue-router
-   > - vuex
-
-##### 处理ajax请求
-  > -  axios
-
-##### UI组件
- > - colorui
-
-##### 样式管理
- > - less
-***
 ## 目录结构
 <pre>
-├── api         		        // 接口
-├── colorui         		    // colorui组件
-├── components        		    // 公共组件
-│   ├── components     		    // 公共组件，必须通用降低特性
-├── pages                		// 生产目录
-│   ├── home         		    // 主页
-│   ├── mine     		        // 我的
-│   ├── order                   // 订单
-│   ├── pick-up          		// 自提
-│   └── shop     		        // 商城
+├── api					// 接口
+├── colorui				// colorui组件
+├── components			 // 公共组件
+│   ├── components		 // 公共组件，必须通用降低特性
+├── pages				  // 生产目录
+│   ├── home		   	// 主页
+│   ├── mine		  	 // 我的
+│   ├── order			  // 订单
+│   ├── pick-up			// 自提
+│   └── shop			   // 商城
 ├── static 
-│   ├── css
-│   └── img 
-├── store
-├── type
-├── unpackage 
-├── utils  	                 // 公用处理方法
-│   ├── img         		  // 图片资源
-│   └── json        		  // 用来测试的json数据
-├── App.vue     			// 项目入口文件
-├── main.js        		     // 项目主入口  		
-└── package.json       		// 项目配置文件
-
+│   ├── css				// 资源文件
+│   └── img 			   // 资源文件
+├── unpackage			  // uniapp打包文件
+├── utils				  // 公用处理方法
+│   ├── ajax			   // 网络请求
+│   └── index		 	 // 工具
+├── App.vue				// 项目入口文件
+├── main.js				// 项目主入口
+└── package.json	   	// 项目配置文件
 </pre>
 
 
-### 公共组件说明
+## git
+> 分支说明
+ - main: 生产分支 
+	- 由发布人员控制，其他开发人员不允许操作
+ - dev: 开发合并分支
+	- 所有开发人员从此分支check code
+ - xxxDev: 开发者名称 + Dev  
+	- sample: cwzDev
 
->存放路径：src/components
+--- 
 
-  组件名称  | 组件说明
-  ---:| :---
-  goods-card.vue        | 商品卡片
-  hll-card.vue          | 项目特殊卡片
-  hll-title.vue         | 项目标题
+> 提交说明
 
+```
+<type>: <subject>
+- add: 新功能
+- fix: 修复 bug
+- docs: 文档注释
+- perf: 性能优化
+- test: 增加测试
+- refactor: 重构、优化(既不增加新功能，也不是修复bug)
+```
+
+--- 
+
+> tips:
+- main分支除发布人员外,其他开发者勿动。
+- 开发人员完成某个功能后, 务必add commit记录功能内容。
+- 线上只有main分支和dev分支的存在啊，其余分支提交和dev合并后,自行删除。
+- 以上说明暂不加入git强行提示, 需自己保持此项目的提交规范。
+- 本地的unpackage不用添加到commit中
+---
