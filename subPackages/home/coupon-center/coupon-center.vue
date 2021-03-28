@@ -1,30 +1,40 @@
 <template>
 	<view class="coupon-center">
-		<view class="coupon-center-menu">
-			<text>待领取</text>
-			<text>待使用</text>
+		<hll-menu style="margin-top:20px;background-color: #FFFFFF;" :menuData="menuData" :active.sync="activeMenu">
+		</hll-menu>
+		<view class="scan-qr-code  flex justify-center align-center">
+			<text>扫码领券</text>
 		</view>
-		<view class="scan-qr-code  flex flex-ai-center flex-jc-center">扫码领券</view>
 		<view class="discount-coupon-card">
-			<view class="flex">
-				<view class="flex flex-item">
-					<text class="number">5元</text>
-					<view>
-						<text class="block">优惠券名称</text>
-						<text class="block">简短说明</text>
+			<view class="line1 flex justify-between align-start">
+				<view class="flex align-end">
+					<text class="number">5</text><text class="text-xs" style="margin-bottom: 15px;">元</text>
+					<view style="margin-bottom: 15px;margin-left: 10px;">
+						<text class="name block">优惠券名称</text>
+						<text class="desc block text-xs">简短说明</text>
 					</view>
 				</view>
 				<button class="button-hll-small">领取</button>
+			</view>
+			<hr>
+			<view class="line3 flex text-xs justify-between">
+				<view>2020.05.06-2020.06.01</view>
+				<view>使用详情></view>
 			</view>
 		</view>
 	</view>
 </template>
 
 <script>
+	import hllMenu from '@/components/hll-menu.vue'
 	export default {
+		components:{
+			hllMenu,
+		},
 		data() {
 			return {
-				
+				menuData:[{id:1,name:'待领取'},{id:2,name:'待使用'}],
+				activeMenu: 1,
 			}
 		},
 		methods: {
@@ -38,7 +48,6 @@
 	background-color: #E6DEDB;
 	height: 100vh;
 	width: 100%;
-	text-align:center;
 	.scan-qr-code{
 		width: 346px;
 		height: 51px;
@@ -47,7 +56,7 @@
 		font-size: 16px;
 		font-weight: 500;
 		color: #737373;
-		margin: 0 auto;
+		margin: 14px auto;
 	}
 	.discount-coupon-card{
 		position: relative;
@@ -56,6 +65,11 @@
 		background: #f1eeed;
 		border-radius: 15px;
 		margin: 14px auto 0;
+		padding: 20px;
+		.line3{
+			color: #858585;
+			margin-top: 10px;
+		}
 		.number{
 			font-size: 48px;
 			font-family: PingFangSC-Medium, PingFang SC;

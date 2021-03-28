@@ -2,6 +2,7 @@
   "navigationBarTitleText": "自提",
   "navigationStyle": "custom",
   "usingComponents": {
-    "goods-card": "/components/goods-card"
+    "goods-card": "/components/goods-card",
+    "hll-notice": "/components/hll-notice"
   }
 }

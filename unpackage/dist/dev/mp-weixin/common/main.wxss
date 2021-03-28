@@ -20,19 +20,58 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*每个页面公共css */
+.h-full{
+	height: 100vh;
+}
+.main-content{
+	background-color: #E6DEDB;
+}
+.ellipse{
+	padding:0px 9px;
+	border-radius: 11px;
+	border: 1px solid #000000;
+	font-size: 15px;
+	font-family: PingFangSC-Regular, PingFang SC;
+}
 .big-icon{
 	 width: 32px;
 	 height: 32px;
 }
 .button-hll-small{
-	 width: 60px;
 	 height: 24px;
 	 line-height: 24px;
 	 background: #FF933B;
 	 border-radius: 15px;
 	 color: #FFFFFF;
-	 font-size: 14px;
+	 font-size: 12px;
+	 margin: 0;
+}
+.font-en-ak{
+	 font-family: AkzidenzGroteskBQ;
 }
 /*
   ColorUi for uniApp  v2.1.6 | by 文晓港 2019-05-31 10:44:24
@@ -46,11 +85,10 @@
         初始化
  ==================== */
 page {
-	background-color: #f1f1f1;
 	font-size: 38rpx;
 	font-weight: 500;
 	color: #333333;
-	font-family: AkzidenzGroteskBQ,Helvetica Neue, Helvetica, sans-serif;
+	font-family: PingFangSC-Regular, PingFang SC,Helvetica Neue, Helvetica, sans-serif;
 }
 view,
 scroll-view,

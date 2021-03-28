@@ -18,7 +18,8 @@
   "window": {
     "navigationBarTextStyle": "black",
     "navigationBarBackgroundColor": "#FFFFFF",
-    "backgroundColor": "#fbf9fe"
+    "backgroundColor": "#fbf9fe",
+    "autoscan": true
   },
   "tabBar": {
     "color": "#7a7e83",
@@ -57,5 +58,9 @@
       }
     ]
   },
-  "usingComponents": {}
+  "usingComponents": {
+    "hll-title": "/components/hll-title",
+    "hll-header": "/components/hll-header",
+    "cu-custom": "/components/colorui/components/cu-custom"
+  }
 }

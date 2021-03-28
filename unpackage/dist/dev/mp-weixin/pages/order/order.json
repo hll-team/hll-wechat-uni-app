@@ -2,5 +2,7 @@
   "navigationBarTitleText": "",
   "enablePullDownRefresh": false,
   "navigationStyle": "custom",
-  "usingComponents": {}
+  "usingComponents": {
+    "hll-menu": "/components/hll-menu"
+  }
 }
