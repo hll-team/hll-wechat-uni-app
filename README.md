@@ -2,17 +2,14 @@
 > 参与该项目开发，请认真阅读开发规范，并严格遵守本项目前端开发规范
 
 ## 环境依赖
-> - base
-	- vue
-	- vuex
-	- vue-router
-> - css
-	- less
-	- colorui
-> - network
-	- axios
-> - npm: >= 6.14.4
-> - node: >= 12.18.0
+- vue
+- vuex
+- vue-router
+- less
+- colorui
+- axios
+- npm: >= 6.14.4
+- node: >= 12.18.0
 
 ## 目录结构
 <pre>
