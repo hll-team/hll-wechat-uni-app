@@ -81,7 +81,7 @@
 			},
 			{
 				"pagePath": "pages/pick-up/pick-up",
-				"text": "自提",
+				"text": "门店",
 				"iconPath": "static/img/tabbar/pick-up.png",
 				"selectedIconPath": "static/img/tabbar/pick-upS.png"
 			},
