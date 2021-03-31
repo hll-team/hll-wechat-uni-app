@@ -103,7 +103,11 @@
 		border-bottom: 1px solid #000000;
 	}
 	.mine-content-gift{
+		display: flex;
 		margin-top: 15px;
+		:nth-child(1) {
+			margin-right: 20px;
+		}
 	}
 	.mine-content-menu{
 		padding: 10px 0;

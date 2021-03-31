@@ -58,6 +58,11 @@
       }
     ]
   },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "请允许位置授权, 以为您更好的提供身边的商品"
+    }
+  },
   "usingComponents": {
     "hll-title": "/components/hll-title",
     "hll-header": "/components/hll-header",

@@ -105,11 +105,11 @@
 /******/
 /******/
 /******/ 		// mini-css-extract-plugin CSS loading
-/******/ 		var cssChunks = {"components/hll-header":1,"components/hll-title":1,"components/hll-card":1,"pages/home/components/advert-swiper":1,"pages/home/components/vip-code":1,"components/goods-card":1,"components/hll-notice":1,"components/hll-menu":1};
+/******/ 		var cssChunks = {"components/hll-header":1,"components/hll-title":1,"components/goods-card":1,"components/hll-notice":1,"components/hll-menu":1};
 /******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 			promises.push(installedCssChunks[chunkId] = new Promise(function(resolve, reject) {
-/******/ 				var href = "" + ({"components/colorui/components/cu-custom":"components/colorui/components/cu-custom","components/hll-header":"components/hll-header","components/hll-title":"components/hll-title","components/hll-card":"components/hll-card","pages/home/components/advert-swiper":"pages/home/components/advert-swiper","pages/home/components/vip-code":"pages/home/components/vip-code","components/goods-card":"components/goods-card","components/hll-notice":"components/hll-notice","components/hll-menu":"components/hll-menu"}[chunkId]||chunkId) + ".wxss";
+/******/ 				var href = "" + ({"components/colorui/components/cu-custom":"components/colorui/components/cu-custom","components/hll-header":"components/hll-header","components/hll-title":"components/hll-title","components/goods-card":"components/goods-card","components/hll-notice":"components/hll-notice","components/hll-menu":"components/hll-menu"}[chunkId]||chunkId) + ".wxss";
 /******/ 				var fullhref = __webpack_require__.p + href;
 /******/ 				var existingLinkTags = document.getElementsByTagName("link");
 /******/ 				for(var i = 0; i < existingLinkTags.length; i++) {

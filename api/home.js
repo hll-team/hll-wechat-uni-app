@@ -22,4 +22,5 @@ service.getMessage = function(params){
   return ajax.post('/v1/app/push/message',params)
 }
 
+
 export default service
